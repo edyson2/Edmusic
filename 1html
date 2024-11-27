@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirección por Nombre</title>
+    <script>
+        function verificarNombre() {
+            const nombre = document.getElementById("nombre").value.trim();
+            if (nombre.toLowerCase() === "edison") {
+                // Redirige al enlace si el nombre es Edison
+                window.location.href = "https://script.google.com/macros/s/AKfycbwWvz92skNo3AWvAxmedB2Lhhx-ar4rtLJVk76tqzvxlOyp_Rvt0DVa6ciqv5M6yzyrfw/exec?parametro=Cesar";
+            } else {
+                alert("El nombre ingresado no es Edison. Intente nuevamente.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Prueba de Redirección</h1>
+    <form onsubmit="event.preventDefault(); verificarNombre();">
+        <label for="nombre">Ingrese su nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
